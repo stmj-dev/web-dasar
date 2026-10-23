@@ -11,6 +11,9 @@ class StockController extends Controller
     {
         $stocks = Stock::all();
 
+        return response()->json([
+        "stocks"=>$stocks
+        ]);
         return view('stock.index', compact('stocks'));
     }
 
